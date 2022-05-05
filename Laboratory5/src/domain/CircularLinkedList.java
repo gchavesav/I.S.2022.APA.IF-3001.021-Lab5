@@ -114,11 +114,13 @@ public class CircularLinkedList implements List {
             if(util.Utility.equals(aux.data, element)){
                 //desenlanza el nodo
                 prev.next = aux.next;
-            }
-            //debo asegurarme q last apunte al ultimo nodo
-            if(aux==last){ //estamos en el ultimo nodo
-                last=prev;
-            }
+                
+                //debo asegurarme q last apunte al ultimo nodo
+                //entendiendo que aux esta en el nodo a suprimir
+                if(aux==last){ //estamos en el ultimo nodo
+                    last=prev;
+                }
+            }  
         }
         //mantengo el enlace circular
         last.next = first;

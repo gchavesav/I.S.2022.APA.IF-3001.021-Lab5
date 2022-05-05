@@ -65,6 +65,10 @@ public class Utility {
         return 1+(int) Math.floor(Math.random()*bound); 
     }
     
+    public static int random(int lowBound, int highBound) {
+        return lowBound+(int) Math.floor(Math.random()*highBound); 
+    }
+    
     public static String format(double value){
         return new DecimalFormat("###,###,###,###.##")
                 .format(value);

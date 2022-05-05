@@ -118,11 +118,16 @@ public class CircularDoublyLinkedList implements List {
                 //desenlanza el nodo
                 prev.next = aux.next;
                 //mantengo el doble enlace
-                aux.next.prev = prev;
-            }
-            //debo asegurarme q last apunte al ultimo nodo
-            if(aux==last){ //estamos en el ultimo nodo
-                last=prev;
+                aux.next.prev = prev; //opcion 1
+                //otra alternativa, opcion 2
+                //Node aux2 = aux.next;
+                //aux2.prev = prev;
+                
+                //debo asegurarme q last apunte al ultimo nodo
+                //entendiendo que aux esta en el nodo a suprimir
+                if(aux==last){ //estamos en el ultimo nodo
+                    last=prev;
+                }
             }
         }
         //mantengo el enlace circular y doble
